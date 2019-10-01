@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.qsptechnologies</groupId>
+  <artifactId>PageFactory_model</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<testFailureIgnore>false</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>src\test\resources\runner\testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<fork>true</fork>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+	<dependencies>
+  
+  <!--selenium driver  -->
+  <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+	<dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-server</artifactId>
+	    <version>3.141.59</version>
+	</dependency>
+	
+	<!--poi jar files 3.6 version  -->
+	<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		
+	<!--For EXternal excel Jar Files  -->
+		<dependency> 
+		  <groupId>com.AutomationWorldByRahul.SeleniumTraining</groupId> 
+		  <artifactId>DataCollection</artifactId> 
+		  <scope>system</scope> 
+		  <version>1.0</version> 
+		  <systemPath>${basedir}\src\test\resources\jarFiles\DataCollection.jar</systemPath> 
+		</dependency>
+		
+		<dependency> 
+		  <groupId>com.AutomationWorldByRahul.SeleniumTraining</groupId> 
+		  <artifactId>ExcelReader</artifactId> 
+		  <scope>system</scope>
+		  <version>1.0</version> 
+		  <systemPath>${basedir}\src\test\resources\jarFiles\ExcelReader.jar</systemPath> 
+		</dependency>
+		
+		<!-- For External Report Generation -->
+	<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+		<dependency>
+		    <groupId>com.relevantcodes</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>2.41.2</version>
+		</dependency>
+  
+  </dependencies>
+  
+</project>
