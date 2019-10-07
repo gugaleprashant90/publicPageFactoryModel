@@ -40,6 +40,15 @@
 	    <version>3.141.59</version>
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>6.9.10</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	
 	<!--poi jar files 3.6 version  -->
 	<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 		<dependency>
